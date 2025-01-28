@@ -1,0 +1,176 @@
+baseURL = 'https://honeynet.org/'
+languageCode = 'en-us'
+title = 'The Honeynet Project'
+rssLimit = 20
+
+#  Disable RSS for everything, and then manually re-enable it in content/blog/_index.md.
+[outputs]
+home     = ["HTML"]
+page     = ["HTML"]
+section  = ["HTML"]
+taxonomy = ["HTML"]
+term     = ["HTML"]
+
+[outputFormats.RSS]
+# Make blog/feed.xml available at /feed/.
+baseName = "../feed/index"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokailight'
+    tabWidth = 4
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[permalinks]
+  blog = '/:year/:month/:day/:filename/'
+  challenges = '/challenges/:filename/'
+  papers = '/papers/:filename/'
+  projects = '/projects/:filename/'
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+
+[menu]
+[[menu.main]]
+  name = 'About'
+  pageRef = '#'
+  weight = 10
+[[menu.main]]
+  name = 'The Project'
+  parent = 'About'
+  pageRef = '/about'
+  weight = 1
+[[menu.main]]
+  name = 'Code of Conduct'
+  parent = 'About'
+  pageRef = '/code-of-conduct'
+  weight = 2
+[[menu.main]]
+  name = 'Funding'
+  parent = 'About'
+  pageRef = '/funding'
+  weight = 3
+[[menu.main]]
+  name = 'Papers'
+  parent = 'About'
+  pageRef = '/papers'
+  weight = 4
+[[menu.main]]
+  name = 'Projects'
+  pageRef = '/projects'
+  weight = 20
+[[menu.main]]
+  name = 'GSoC'
+  pageRef = '/gsoc'
+  weight = 30
+[[menu.main]]
+  name = 'Google Summer of Code'
+  parent = 'GSoC'
+  pageRef = '/gsoc'
+  weight = 10
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2024'
+  pageRef = '/gsoc/gsoc-2024'
+  weight = 19
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2023'
+  pageRef = '/gsoc/gsoc-2023'
+  weight = 20
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2022'
+  pageRef = '/gsoc/gsoc-2022'
+  weight = 21
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2021'
+  pageRef = '/gsoc/gsoc-2021'
+  weight = 22
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2020'
+  pageRef = '/gsoc/gsoc-2020'
+  weight = 23
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2018'
+  pageRef = '/gsoc/gsoc-2018'
+  weight = 24
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2017'
+  pageRef = '/gsoc/gsoc-2017'
+  weight = 25
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2016'
+  pageRef = '/gsoc/gsoc-2016'
+  weight = 26
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2015'
+  pageRef = '/gsoc/gsoc-2015'
+  weight = 27
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2014'
+  pageRef = '/gsoc/gsoc-2014'
+  weight = 28
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2013'
+  pageRef = '/gsoc/gsoc-2013'
+  weight = 29
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2012'
+  pageRef = '/gsoc/gsoc-2012'
+  weight = 30
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2011'
+  pageRef = '/gsoc/gsoc-2011'
+  weight = 31
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2010'
+  pageRef = '/gsoc/gsoc-2010'
+  weight = 32
+[[menu.main]]
+  parent = 'GSoC'
+  name = 'GSoC 2009'
+  pageRef = '/gsoc/gsoc-2009'
+  weight = 33
+[[menu.main]]
+  name = 'Workshops'
+  pageRef = '/workshops'
+  weight = 40
+[[menu.main]]
+  name = 'Challenges'
+  pageRef = '/challenges'
+  weight = 50
+[[menu.main]]
+  name = 'Blog'
+  pageRef = '/blog'
+  weight = 60
+[[menu.main]]
+  name = 'FAQ'
+  pageRef = '/faq'
+  weight = 70
